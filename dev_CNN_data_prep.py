@@ -45,24 +45,6 @@ for i in range(10):
             brain_slice= img_data[:,:,k,j]
             imageio.imwrite('adult'+'{:02d}'.format(i)+'{:03d}'.format(j)+'{:02d}'.format(k)+'.jpg', brain_slice)
 
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ###############################
 
@@ -141,27 +123,10 @@ anat_img.affine
 hdf= h5py.File('dev_CNN.h5','w')
 
 G1= hdf.create_group('training_set')
-G1.create_dataset('child',dtype=    , data=)
+G1.create_dataset('child')
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     
 #    data_adult1.append(nilearn.image.get_data(nilearn.image.load_img(func_filenames1[i])))
 
@@ -194,26 +159,6 @@ X=[]
 
 for i in np.linspace(0,5020,252):
     X.append(np.concatenate((data_child[:,:,:,i:(i+20)],data_adult[:,:,:,i:(i+20)]),axis=3))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
